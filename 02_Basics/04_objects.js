@@ -88,3 +88,50 @@ const personalData = {
 console.log(Object.keys(personalData))      // RETURNS ONLY KEYS OF A GIVEN OBJECT
 console.log(Object.values(personalData))    // RETURNS ONLY VALUES OF A GIVEN OBJECT
 console.log(Object.entries(personalData))   // RETURNS ENTRIES OF A GIVEN OBJECT AS EACH ARRAY
+
+console.log("");
+
+// DESTRUCTING
+
+const course = {
+    courseName : "JS in hindi",
+    price : "999",
+    courseInstructor : "hitesh"
+}
+
+// METHODS OF PRINTING OBJECT-ELEMENT BY DIFFERENT SYNTAX
+
+console.log(course);
+console.log("");
+
+console.log(course.courseInstructor); // METHOD ONE
+console.log("");
+
+const {courseInstructor /*(ELEMENT OF OBJECT WHO'ES VALUE WE WANT TO USE) */ } = course; /*(NAME OF OBJECT FROM WHICH WE WILL TAKE ELEMENTS VALUE) */    // METHOD TWO
+console.log(courseInstructor);
+console.log("");
+
+const {courseInstructor : instructor/* THIS IS A NICK NAME WHICH WE CAN GIVE TO ELEMENT OF A OBJECT */} = course;     // METHOD THREE
+console.log(instructor);
+console.log("");
+
+
+
+
+// API (APPLICATION PROGRAMMING INTERFACE)
+
+// THESE ARE KIND OF OBJECTS WITH NO NAME AND KEYS AS STRING
+
+// {
+//     "name" : "Abhay kaushal",
+//     "courseName" : "JS in hindi",
+//     "price" : "Free"
+// }
+
+// WE CAN ALSO GET API IN FORM OF ARRAYS AS WELL AS OBJECT
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
