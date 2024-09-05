@@ -74,3 +74,17 @@ if(loggedInFromGoogle || loggedInFromEmail){
     console.log("User LoggedIn");
 }
 console.log(""); 
+
+
+
+// Nullish Coalescing Operator (??):  (WORKS ON null AND undefined KEYWORD) 
+
+let val1;
+val1 = 5 ?? 10                              //5
+val1 = null ?? 10                           //10
+val1 = undefined ?? 50                      //50
+val1 = null ?? 5 ?? 10                      // 5
+val1 = null ?? undefined                    //undefined
+val1 = null ?? undefined ?? 15              //15
+
+console.log(val1);
