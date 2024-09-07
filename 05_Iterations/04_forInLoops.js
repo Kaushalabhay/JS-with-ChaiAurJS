@@ -10,9 +10,12 @@ const myObject = {
 // for (const key in object) {
 //     if (Object.prototype.hasOwnProperty.call(object, key)) {
 //         const element = object[key];
-        
 //     }
 // }
+
+
+
+
 
 // for (const key in myObject) {    // USING THIS METHOD WE ONLY GET KEYS OF THE OBJECT
 //     console.log(key);
