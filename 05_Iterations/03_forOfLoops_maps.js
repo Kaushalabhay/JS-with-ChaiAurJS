@@ -69,3 +69,7 @@ console.log("");
 // for (const [key , value] of myObject) {
 //     console.log(key , '=>' , value);
 // }
+
+// for (const element of myObject) {            // OBJECTS ARE NOT ITERABLE USING FOR OF LOOP
+//     console.log(element); 
+// }
