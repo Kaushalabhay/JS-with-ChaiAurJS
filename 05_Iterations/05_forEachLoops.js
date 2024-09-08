@@ -64,5 +64,5 @@ const myCoding = [
 
 myCoding.forEach( (item) => {
     console.log(item.languageName);
-    console.log(item.languagefilename);
+    console.log(item);
 })
