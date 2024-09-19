@@ -9,8 +9,61 @@
 
 <body>
     <div class="bg-black">
-        <h1 class="heading">DOM learning on chai aur code</h1>
+        <h1 id="title1" class="heading">DOM learning on chai aur code</h1>
+        <h1 id="title2" class="heading">DOM learning on chai aur code</h1>
         <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <hr>
+    <hr>
+
+    <div class="bg-black1">
+        <h1 id="title3" class="heading1">DOM learning on chai aur code<span> test text</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <!-- title1.textContent
+        'DOM learning on chai aur code test text' -->
+
+        <!-- title1.innerText
+        'DOM learning on chai aur code test text' -->
+
+
+
+        <h1 id="title4" class="heading1">DOM learning on chai aur code<span style="display: none;"> test text</span>
+        </h1>
+
+        <!-- title4.textContent
+        'DOM learning on chai aur code test text' -->
+
+        <!-- title4.innerText
+        'DOM learning on chai aur code' -->
+
+        <!-- title4.innerHTML
+        'DOM learning on chai aur code<span style="display: none;"> test text</span>\n -->
+
+
+
+
+        <!-- QUERY SELECTOR -->
+        <!-- 1) document.querySelector('h1')
+        <h1 id="title1" class="heading">DOM learning on chai aur code</h1> -->
+
+
+        <!-- 2) document.querySelectorAll('h1')
+        NodeList(4) [h1#title1.heading, h1#title2.heading, h1#title3.heading1, h1#title4.heading1]
+        0: h1#title1.heading
+        1: h1#title2.heading
+        2: h1#title3.heading1
+        3: h1#title4.heading1
+        length:4
+        [[Prototype]]: NodeList -->
+
+
+        <!-- 3) document.querySelector('#title3')
+         <h1 id=​"title3" class=​"heading1">​…​</h1>
+
+
+        document.querySelector(".heading")
+        <h1 id=​"title1" class=​"heading">​DOM learning on chai aur code​</h1>​ -->
     </div>
 
 </body>
