@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Real time Timer</h1>
+    <p>Using Set-Interval function</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //SET INTERVAL METHOD
+
+    // Set interval has 3 parameters
+    // setInterval(() => {
+    //     console.log("hello", Date.now())
+    // }, 15000);
+
+
+
+    // ANOTHER METHOD OF USING SET-INTERVAL METHOD (Making a function and passing its reference)
+    const intervalFunction = function () {
+        console.log("console log of Interval function after 6s");
+    }
+    const intervalId = setInterval(intervalFunction, 6000);
+
+
+    // Clear Interval function(Method)
+    clearInterval(intervalId);
+
+
+
+
+
+    
+
+
+    // REAL TIME TIMER USING INTEVAL FUNCTION
+
+    let timer = "";
+    const time = document.querySelector('p')
+    document.querySelector('#start').addEventListener('click', function () {
+        timer = setInterval(() => {
+        let date = new Date();
+        time.innerHTML = date.toLocaleTimeString();
+        }, 1000);
+    })
+    
+    
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(timer);
+    })
+
+
+
+
+
+</script>
+
+</html>
