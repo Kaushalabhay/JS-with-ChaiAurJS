@@ -88,8 +88,6 @@ setInterval(function (){
 
 ## Project 4 Solution
 
-
-
 ``` JavaScript
 
 const randomNumber = parseInt(Math.random() * 100 + 1); 
@@ -187,12 +185,12 @@ function newGame(){
 ```
 
 
-
 ## Project 5 Solution
 
 ```JawaScript
 // Generate Random colour
-const RandomColour = function () {
+
+  const RandomColour = function () {
   const hex = '0123456789ABCDEF';
   let color = '#';
   for (i = 0; i < 6; i++) {
@@ -228,6 +226,37 @@ document.querySelector('#start').addEventListener('click', startChangingColour);
 
 // Selecting Stop BUTTON
 document.querySelector('#stop').addEventListener('click', stopChangingColour);
+
+
+```
+
+
+
+## Project 6 solution
+
+```JavaScript
+  // THIS PROJECT GIVES YOU THE PRESSED KEY , ITS KEY-CODE AND CODE 
+
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown' , (e) => {
+  insert.innerHTML = 
+  `<div class = 'color'>
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th> 
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td> 
+      <td>${e.code}</td>
+    </tr>
+    
+  </table>
+  </div>`
+})
 
 
 ```
