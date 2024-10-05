@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+    <p></p>
+</body>
+<script>
+    // SET TIMEOUT METHOD 
+    setTimeout(() => {
+        console.log("set timeOut function after time interval of 5s");
+    }, 5000);
+
+
+
+    // ANOTHER METHOD OF CALLING SET-TimeOut Function (Making a function and passing its reference)
+    const timeOutFunction = function () {
+        console.log("console log of setTimeOut function after 6s");
+    }
+    setTimeout(timeOutFunction, 6000);
+
+
+
+    //Using set-TimeOut if we want to change out innerHTML
+    // document.querySelector('h1').innerHTML = "Best js series";  // This is the normal way
+
+    // If we want to change InnerHTML using Timeout function
+    const changeInnerHTML = function () {
+        document.querySelector('h1').innerHTML = "Best js series";
+    }
+    const changeMe = setTimeout(changeInnerHTML, 5000);   //THIS WILL RUN AFTER 5s OF REFRESHING THE SERVER.
+
+
+
+    // If we want to stop execution of Set-TimeOut function before its execution inbetween the interval
+    // WE WILL USE clearTimeout();
+
+    document.querySelector('button').addEventListener('click',function (){
+        clearTimeout(changeMe);  // CONDITION - we have to perform this before complition of setTimeOut interval
+        document.querySelector('p').innerHTML = "Set-TimeOut function stopped"
+    })
+
+
+</script>
+</html>
