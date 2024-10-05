@@ -88,6 +88,8 @@ setInterval(function (){
 
 ## Project 4 Solution
 
+
+
 ``` JavaScript
 
 const randomNumber = parseInt(Math.random() * 100 + 1); 
@@ -181,5 +183,51 @@ function newGame(){
     playGame = true;
   });
 }
+
+```
+
+
+
+## Project 5 Solution
+
+```JawaScript
+// Generate Random colour
+const RandomColour = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+
+// Function to change colour
+let interval;
+const startChangingColour = function () {
+  function changeByColour() {
+    document.body.style.backgroundColor = RandomColour();
+  }
+
+  if(!interval){
+  interval = setInterval(changeByColour, 1000);
+  }
+};
+
+
+// Function to stop changing colour
+const stopChangingColour = function () {
+  clearInterval(interval);
+  interval = null;
+};
+
+
+// Selecting Start BUTTON
+document.querySelector('#start').addEventListener('click', startChangingColour);
+
+
+// Selecting Stop BUTTON
+document.querySelector('#stop').addEventListener('click', stopChangingColour);
+
 
 ```
