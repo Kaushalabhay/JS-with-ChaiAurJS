@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <hr>
+    0	UNSENT	Client has been created. open() not called yet.
+    <hr>
+    1	OPENED	open() has been called.
+    <hr>
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    <hr>
+    3	LOADING	Downloading; responseText holds partial data.
+    <hr>
+    4	DONE	The operation is complete.
+    <hr>
+
+    <div id="form">Its a personal data form
+        <h1></h1>
+        <h5></h5>
+        <p></p>
+    </div>
+
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary"
+    const xrl =  new XMLHttpRequest();
+    xrl.open('GET' , requestUrl)
+    xrl.onreadystatechange = function (){
+         console.log(xrl.readyState);   // THIS WILL PRINT THE CHANGED STATES
+        if (xrl.readyState === 4) {
+            console.log(this.responseText); // THIS IS USED WHEN WE ARE TALKING ABOUT CURRENT CONTEXT(function)
+            // we are getting the text which we get in return
+            const data = JSON.parse(this.responseText)
+            // JSON = An intrinsic object that provides functions to convert 
+            //        JavaScript values to and from the JavaScript Object Notation (JSON) format.
+            // PARSE = Converts a JavaScript Object Notation (JSON) string into an object.
+
+            console.log(typeof data);
+            console.log(data.followers);
+            console.log(data.name);
+            console.log(data.avatar_url);
+            document.querySelector('h1').innerHTML = data.name;
+            document.querySelector('h5').innerHTML = data.followers;
+          
+            
+        } 
+    }
+    xrl.send()
+</script>
+</html>
